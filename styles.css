@@ -1,0 +1,75 @@
+body {
+    font-family: 'Segoe UI','Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #171724; /* Light gray background */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 80px 20px 20px; /* Added top margin to avoid overlap */
+}
+
+.card {
+    width: 70%;
+    margin: 10px;
+    padding: 0px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out; /* Add a smooth scale transition on hover */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Scale the card slightly on hover */
+}
+
+
+#asthmaCard {
+    background-color: #6e9f6e; /* Light green background by default */
+}
+
+#asthmaCard.highRisk {
+    background-color: #ff0000; /* Light red background for high risk */
+}
+
+#weatherCard {
+    background-color: rgb(56, 16, 78); /* Light blue background for weather card */
+}
+
+#healthCard {
+    background-color: rgb(104, 81, 48); /* Light orange background for health card */
+}
+
+.navbar {
+    position: fixed;
+    top: 0px; /* Adjusted top position */
+    width: 100%;
+    background-color: #172a37;
+    overflow: hidden;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center; /* Center the navbar items horizontally */
+    align-items: center; /* Center the navbar items vertically */
+}
+
+.navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin: 0 10px; /* Adjusted margin between navbar items */
+}
+
+.navbar a:hover {
+    background-color: #2980b9;
+    border-radius: 5px;
+}

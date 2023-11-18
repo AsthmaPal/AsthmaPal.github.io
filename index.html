@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>My Health Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.7.7"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="asthmaCard">
+            <p id="asthmaRisk"></p>
+        </div>
+        <div class="card" id="weatherCard">
+            <div id="weatherWidgetContainer">
+                <script>
+                    (function(d, s, id) {
+                        if (d.getElementById(id)) {
+                            if (window.__TOMORROW__) {
+                                window.__TOMORROW__.renderWidget();
+                            }
+                            return;
+                        }
+                        const fjs = d.getElementsByTagName(s)[0];
+                        const js = d.createElement(s);
+                        js.id = id;
+                        js.src = "https://www.tomorrow.io/v1/widget/sdk/sdk.bundle.min.js";
+            
+                        fjs.parentNode.insertBefore(js, fjs);
+                    })(document, 'script', 'tomorrow-sdk');
+                    </script>
+            
+                    <div class="tomorrow"
+                       data-location-id=""
+                       data-language="EN"
+                       data-unit-system="METRIC"
+                       data-skin="dark"
+                       data-widget-type="aqiPollutant"
+                       style="padding-bottom:22px;position:relative;"
+                    >
+                    </div>
+            </div>
+        </div>
+        
+        <div class="card" id="healthCard">
+            <p id="healthInfo"></p>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <a href="#" class="icon">Home</a>
+        <a href="diary.html" class="icon">Diary</a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
